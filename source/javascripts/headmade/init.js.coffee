@@ -49,6 +49,7 @@ class @headmade.Headmade
         crumb   = s_crumbs.get(i)
         crumb.addClass "transition"  
         (crumb).attr 'style', "-webkit-transform: translate(#{move_crambX[i]}, #{move_crambY[i]})"
+      $("#shadow").css('display', 'block')
 #        console.log(headmade.dots.crumbs_broken[i].d.split(/[^\d\.]/))
 #        crumb   = s_crumbs.get(i)
 #        crumb.animate(1000)
