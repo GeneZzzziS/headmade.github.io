@@ -40,15 +40,10 @@ class @headmade.Headmade
       move_crambY[i] = [((crambs_start[1] + crambs_start[3] + crambs_start[5])/3 - (crambs_end[1] + crambs_end[3] + crambs_end[5])/3) + "px"]
       
 
-    
-
     $("#head").on "click", ()=>
       (head).addClass "svg-head"
-      console.log ("I was born!") 
       s_crumbs.each (i)=>
-        crumb   = s_crumbs.get(i)
-        crumb.addClass "transition"  
-        (crumb).attr 'style', "-webkit-transform: translate(#{move_crambX[i]}, #{move_crambY[i]})"
+        CollectCrumbs(i)
       $("#shadow").css('display', 'block')
 #        console.log(headmade.dots.crumbs_broken[i].d.split(/[^\d\.]/))
 #        crumb   = s_crumbs.get(i)
@@ -74,6 +69,9 @@ class @headmade.Headmade
 #      move_cramb    = [ (crambs_end[0] + crambs_end[2] + crambs_end[4])/3 , (crambs_end[1] + crambs_end[3] + crambs_end[5])/3 ]
 #      move
 #    move
-
+    CollectCrumbs = (i) ->
+      crumb   = s_crumbs.get(i)
+      crumb.addClass "transition"  
+      (crumb).attr 'style', "-webkit-transform: translate(#{move_crambX[i]}, #{move_crambY[i]})"
 
 new @headmade.Headmade(@headmade)
