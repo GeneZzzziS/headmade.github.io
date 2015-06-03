@@ -41,10 +41,10 @@ class @headmade.Headmade
       
 
     $("#head").on "click", ()=>
-      (head).addClass "svg-head"
+      Livitation()
       s_crumbs.each (i)=>
         CollectCrumbs(i)
-      $("#shadow").css('display', 'block')
+      ShowShadow()
 #        console.log(headmade.dots.crumbs_broken[i].d.split(/[^\d\.]/))
 #        crumb   = s_crumbs.get(i)
 #        crumb.animate(1000)
@@ -69,6 +69,13 @@ class @headmade.Headmade
 #      move_cramb    = [ (crambs_end[0] + crambs_end[2] + crambs_end[4])/3 , (crambs_end[1] + crambs_end[3] + crambs_end[5])/3 ]
 #      move
 #    move
+
+    Livitation = () ->
+      (head).addClass "svg-head"
+
+    ShowShadow = () ->
+      $("#shadow").css('display', 'block')
+
     CollectCrumbs = (i) ->
       crumb   = s_crumbs.get(i)
       crumb.addClass "transition"  
