@@ -41,9 +41,9 @@ class @headmade.Headmade
       
 
     $("#head").on "click", ()=>
-      Livitation()
       s_crumbs.each (i)=>
         CollectCrumbs(i)
+      Livitation()
       ShowShadow()
 #        console.log(headmade.dots.crumbs_broken[i].d.split(/[^\d\.]/))
 #        crumb   = s_crumbs.get(i)
